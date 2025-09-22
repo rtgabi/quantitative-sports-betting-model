@@ -42,6 +42,3 @@ The function "alloc" takes 3 parameters:
 First the function creates an empty dictionary "kelly_fractions". For every pair of (odds, probability) fractional kelly will be calculated, if the value is positive, it will be added into the dictionary with "Decision": "Bet", else it will be "No bet". 
 Then the sum of those fractions will be calculated, if "Decision" is "Bet", and each one will be normalized.
 Finally, the function will return a list of money to put on every event given.
-
-## 4. Experimental
-The experimental module has comments that can provide enough informations about what it does. The main modules were build in a way so the experimental functions works with them as well.
