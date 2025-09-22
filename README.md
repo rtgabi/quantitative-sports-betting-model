@@ -44,4 +44,4 @@ Then the sum of those fractions will be calculated, if "Decision" is "Bet", and 
 Finally, the function will return a list of money to put on every event given.
 
 ## 4. Experimental
-The experimental module has comments that can provide enough informationsm about what it does. The main modules were build in a way so the experimental functions works with them as well.
+The experimental module has comments that can provide enough informations about what it does. The main modules were build in a way so the experimental functions works with them as well.
