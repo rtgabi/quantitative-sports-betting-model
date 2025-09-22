@@ -1,5 +1,5 @@
 # Quantitative Sport Betting Model
-This is a project only for showcasing my knowledge and skills, it's not (and should not be used as) financial advice. The main build uses Selenium for web-scraping the data, Poisson distribution for finding an edge, and Kelly Criterion for allocating money amongst bets.
+This is a project only for showcasing my knowledge and skills, it's not (and must not be used as) financial advice. The main build uses Selenium for web-scraping the data, Poisson distribution for finding an edge, and Kelly Criterion for allocating money amongst bets.
 
 ## 1. Getting the data
 For this, I used Selenium to get data from "Flashscore.com".
