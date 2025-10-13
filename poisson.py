@@ -41,29 +41,19 @@ def prob(avg1: float, avg2: float, n: [], goals: int) -> {}:
 
 def prob_dist(avg1: float, avg2: float, n: [], goals: int):
     teams_goals_odds=prob(avg1, avg2, n, goals)
-    team1=n[0]
-    team2=n[1]
+    colors=['green', 'red']
+    avgs=[avg1, avg2]
 
     fig,axes=plt.subplots(1,2,figsize=(10,5))
 
-    # Team 1 probability distribution
-    axes[0].bar(teams_goals_odds[f'{team1}']['goals'], teams_goals_odds[f'{team1}']['p'], color='green',
-                label=f'Average goals: {avg1:.2f}')
-    axes[0].set_title(f'{team1}: Poisson Distribution', fontsize=14)
-    axes[0].set_xlabel('Number of goals', fontsize=12)
-    axes[0].set_ylabel('Probability', fontsize=12)
-    axes[0].set_xticks(teams_goals_odds[f'{team1}']['goals'])
-    axes[0].grid(axis='y', linestyle='--', alpha=0.7)
-    axes[0].legend()
-
-    # Team 2 probability distribution
-    axes[1].bar(teams_goals_odds[f'{team2}']['goals'], teams_goals_odds[f'{team2}']['p'], color='red',
-                label=f'Average goals: {avg2:.2f}')
-    axes[1].set_title(f'{team2}: Poisson Distribution', fontsize=14)
-    axes[1].set_xlabel('Number of goals', fontsize=12)
-    axes[1].set_xlabel('Probability', fontsize=12)
-    axes[1].set_xticks(teams_goals_odds[f'{team2}']['goals'])
-    axes[1].grid(axis='y', linestyle='--', alpha=0.7)
-    axes[1].legend()
+    for i in range(0,2):
+        axes[i].bar(teams_goals_odds[f'{n[i]}']['goals'], teams_goals_odds[f'{n[i]}']['p'], color=colors[i],
+                    label=f'Average goals: {avgs[i]:.2f}')
+        axes[i].set_title(f'{n[i]}', fontsize=14)
+        axes[i].set_xlabel('Number of goals', fontsize=12)
+        axes[i].set_ylabel('Probability', fontsize=12)
+        axes[i].set_xticks(teams_goals_odds[f'{n[i]}']['goals'])
+        axes[i].grid(axis='y', linestyle='--', alpha=0.7)
+        axes[i].legend()
 
     plt.show()
